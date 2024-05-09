@@ -14,7 +14,7 @@ export const cars = [
   {
     id: 3,
     name: "Honda Civic2",
-    price: 25545,
+    price: 9000,
     image: "http://localhost:5173/images/1.png",
   },
 ];

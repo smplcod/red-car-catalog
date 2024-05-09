@@ -14,8 +14,8 @@ function Home() {
     <div>
       <h1>Cars catalog</h1>
       <div>
-        {cars.length ? (
-          cars.map((car) => <CarItem key={car.id} car={car} />)
+        {filteredCars.length ? (
+          filteredCars.map((car) => <CarItem key={car.id} car={car} />)
         ) : (
           <p>There are no cars</p>
         )}
