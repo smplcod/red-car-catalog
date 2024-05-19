@@ -8,7 +8,11 @@ const CreateCarForm = ({ setCars }) => {
 
   const createCar = (e) => {
     e.preventDefault();
-    setCars((prev) => [...prev, { id: prev.length + 1, name, price, image }]);
+    const priceNumber = parseFloat(price); // Конвертация строки в число
+    setCars((prev) => [
+      ...prev,
+      { id: prev.length + 1, name, price: priceNumber, image },
+    ]);
   };
 
   return (
