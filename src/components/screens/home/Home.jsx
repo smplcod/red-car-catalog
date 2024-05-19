@@ -3,14 +3,15 @@ import styles from "./Home.module.css";
 import CarItem from "./car-item/Caritem.jsx";
 import { cars as carsData } from "./cars.data.js";
 import CreateCarForm from "./create-car-form/CreateCarForm.jsx";
+import axios from "axios";
+import { CarService } from "../../../services/car.service.js";
 
 function Home() {
   const [cars, setCars] = useState(carsData);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:3000/cars");
-      const data = await response.json();
+      const data = await CarService.getAll();
       setCars(data);
     };
     fetchData();
