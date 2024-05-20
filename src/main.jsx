@@ -3,9 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./assets/styles/global.css";
 import Home from "./components/screens/home/Home";
+import Router from "./components/Router";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Home />
+    <Router />
   </React.StrictMode>
 );
