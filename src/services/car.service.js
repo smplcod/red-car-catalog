@@ -7,7 +7,7 @@ export const CarService = {
   },
 
   async getById(id) {
-    const response = await axios.get(`http://localhost:3000/cars/?id={id}`);
-    return response.data[0];
+    const response = await axios.get(`http://localhost:3000/cars/${id}`);
+    return response.data;
   },
 };
